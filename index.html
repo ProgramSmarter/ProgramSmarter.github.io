@@ -20,9 +20,28 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 </style>
 </head>
 <body>
 <div class="bg"></div>
+<div class="row">
+  <div class="column">
+    <img src="helpfullinks.jpg" alt="Helpful Links" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="blog.jpg" alt="Blog" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="tips.jpg" alt="Tips" style="width:100%">
+  </div>
+</div>
 </body>
 </html>
