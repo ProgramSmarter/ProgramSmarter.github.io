@@ -2,8 +2,47 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: #0b7dda;
+}
+.bton {
   background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
@@ -13,7 +52,7 @@
 }
 
 /* Darker background on mouse-over */
-.btn:hover {
+.bton:hover {
   background-color: black;
 }
 body, html {
@@ -110,10 +149,21 @@ body {background-color: #EBFAFF;}
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <a href="">
-<button class="btn"><i class="fa fa-home"></i> Program Smarter</button>
+<button class="bton"><i class="fa fa-home"></i> Program Smarter</button>
 </a>
-<p></p>
-<a class="button-one" title="Blog" href="/blog">Blog</a><a class="button-two" title="Tips" href="/tips">Tips</a><a class="button-three" title="Helpful Links" href="/helpfullinks">Helpful Links</a>
+<a href="https://programsmarter.github.io/resources">
+<button class="btn">Resources</button>
+</a>
+<div class="dropdown">
+  <button class="btn" style="border-left:1px solid #0d8bf2">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="https://programsmarter.github.io/blog">Blog</a>
+    <a href="https://programsmarter.github.io/tips">Tips</a>
+    <a href="https://programsmarter.github.io/helpfullinks">Helpful Links</a>
+  </div>
+</div>
 <div class="bg"></div>
 <p></p>
 <p></p>
