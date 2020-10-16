@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+/* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
@@ -96,22 +97,29 @@ p    {
   margin-right: auto;
   width: 40%;
 }
-.topnav-right {
-  float: right;
-}
+
 body {background-color: #EBFAFF;}
 </style>
 </head>
 <body>
+<!-- The overlay -->
 <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
   <div class="overlay-content">
-    <a href="https://programsmarter.github.io/blog">Blog</a>
-    <a href="https://programsmarter.github.io/tips">Tips</a>
-    <a href="https://programsmarter.github.io/helpfullinks">Helpful Links</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
+
 </div>
-<span onclick="openNav()">Home</span>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">open</span>
 <div class="bg"></div>
 <p></p>
 <p></p>
