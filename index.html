@@ -75,6 +75,19 @@ form {
 .button-three:hover {
     background: #fff;
 }
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -84,9 +97,18 @@ form {
 <p></p>
 <p></p>
 <p>AN ENORMOUS DATABASE OF TIPS, TRICKS, AND, ARTICLES TO REFINE YOUR PROGRAMMING!⤵</p>
-  <a href="/resources">
-  <img src="goo.jpg" alt="Link to Resources">
-  </a>
+<img src="goo.jpg" alt="Link to Resources">
+<div class="row">
+  <div class="column">
+    <img src="linker" alt="Link to Helpful Links" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="tipper.jpg" alt="Link to Tips" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="blogger.jpg" alt="Link to Blog" style="width:100%">
+  </div>
+</div>
 <form method="get" action=""><button type="submit">Return To Top</button></form>
 </body>
 </html>
