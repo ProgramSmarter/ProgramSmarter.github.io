@@ -3,6 +3,19 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.btn {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -104,6 +117,10 @@ form {
 </style>
 </head>
 <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<a href="">
+<button class="btn"><i class="fa fa-home"></i></button>
+</a>
 <a class="button-zero" title="Relevant Title" href="">Program Smarter</a><a class="button-one" title="Relevant Title" href="/blog">Blog</a><a class="button-two" title="Relevant Title" href="tips">Tips</a><a class="button-three" title="Relevant Title" href="/helpfullinks">Helpful Links</a>
 <div class="bg"></div>
 <p></p>
