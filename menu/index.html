@@ -1,32 +1,34 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
-<head>
 <style>
-body {background-color: black;}
-<!DOCTYPE html>
-<html>
-<body>
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
 
-<h2>Image Maps</h2>
-<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
 
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
-
-<map name="workmap">
-  <area shape="rect" coords="34,44,270,350" alt="Back" href="https://programsmarter.github.io">
-  <area shape="rect" coords="290,172,333,250" alt="Tips" href="https://programsmarter.github.io/tips">
-  <area shape="rect" coords="337,300,44" alt="Helpful Links" href="https://programsmarter.github.io/helpfullinks">
-  <area shape="rect" coords="337,300,44" alt="Helpful Links" href="https://programsmarter.github.io/blog">
-</map>
-
-</body>
-</html>
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
 </style>
-</head>
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<h1>Vertical Button Group</h1>
+
+<div class="btn-group">
+  <button href="google.com">Apple</button>
+  <button>Samsung</button>
+  <button>Sony</button>
+</div>
 
 </body>
 </html>
