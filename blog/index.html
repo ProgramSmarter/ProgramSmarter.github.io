@@ -3,88 +3,29 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 * {
   box-sizing: border-box;
 }
 
-/* Add a gray background color with some padding */
 body {
-  font-family: Arial;
-  padding: 20px;
-  background: #aaf0d1;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
   text-align: center;
-  background: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-   text-align: center;
+.containerTab {
+  padding: 20px;
+  color: white;
 }
 
 /* Clear floats after the columns */
@@ -94,86 +35,64 @@ body {
   clear: both;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 </style>
 </head>
 <body>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="https://programsmarter.github.io">Home</a>
-    <a href="https://programsmarter.github.io/blog">Blog</a>
-    <a href="https://programsmarter.github.io/tips">Tips</a>
-    <a href="https://programsmarter.github.io/helpfullinks">Helpful Links</a>
-  </div>
-  <div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  </div>
-  </div>
 
-  <script>
-  function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  }
-
-  function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  }
-  </script>
-<div class="header">
+<div style="text-align:center">
   <h2>Program Smarter Blog</h2>
+  <p></p>
 </div>
 
+<!-- Three columns -->
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>GITHUB PAGES</h2>
-      <h5>Title description, Oct. 20, 2020</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p></p>
-    </div>
-    <div class="card">
-      <h2>BAYESIAN THINKING</h2>
-      <h5>Title description, Oct. 17, 2020</h5>
-      <div class="fakeimg" style="height:200px;"></div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    Box 1
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <a href="https://programsmarter.github.io/archives">
-      <h3>Archives</h3>
-      </a>
-    </div>
-    <div class="card">
-      <h3>Other Resources</h3>
-      <a href="https://programsmarter.github.io/helpfullinks">Helpful Links</a>
-      <p></p>
-      <a href="https://programsmarter.github.io/tips">Tips</a>
-    </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    Box 2
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Box 3
   </div>
 </div>
 
-<div class="footer">
-  <h2>   Github | Program Smarter</h2>
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 1</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
 </div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 2</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 3</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
 
 </body>
 </html>
