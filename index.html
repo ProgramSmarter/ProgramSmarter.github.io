@@ -4,6 +4,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
 }
 body {
   font-family: "Lato", sans-serif;
@@ -70,6 +101,37 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
 .row {
   display: flex;
 }
@@ -96,6 +158,7 @@ h1   {
   margin-right: auto;
   width: 40%;
 }
+
 .my-button {
     display: inline-block;
     margin: 145px; /* space between buttons */
@@ -141,6 +204,10 @@ body {background-color: #EBFAFF;}
     document.getElementById("main").style.marginLeft= "0";
   }
   </script>
+  <div class="container">
+    <img src=".jpg" alt="Snow">
+    <button class="btn">Button</button>
+  </div>
 <div class="bg"></div>
 <p></p>
 <p></p>
