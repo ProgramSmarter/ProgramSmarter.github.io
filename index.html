@@ -1,29 +1,25 @@
 <html>
-<head>
-  <script type="text/javascript">
-    const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer&Timezone=-7",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Key": "ebb7c1c15bmshbee6b284165d76ep1033adjsnbf6f2f73f55a",
-		"X-RapidAPI-Host": "livescore6.p.rapidapi.com"
-	    }
-    };
-
-    $.ajax(settings).done(function (response) {
-	    console.log(response);
-    });
-  </script>
-</head>
-
 <body>
     <h1>
-      the value for number is:
-      <script type="text/javascript">
-        document.write(response)
-      </script>
+        the value for number is: 
+        <script type="text/javascript">
+            const settings = {
+	            "async": true,
+	            "crossDomain": true,
+	            "url": "https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer&Timezone=-7",
+	            "method": "GET",
+	            "headers": {
+		        "X-RapidAPI-Key": "ebb7c1c15bmshbee6b284165d76ep1033adjsnbf6f2f73f55a",
+		        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+	            }
+            };
+
+            $.ajax(settings).done(function (response) {
+	            console.log(response);
+            });
+            document.write(settings);
+        </script>
+        
     </h1>
 </body>
 </html>
