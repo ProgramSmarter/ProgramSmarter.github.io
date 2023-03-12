@@ -4,15 +4,16 @@
     const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://livescore6.p.rapidapi.com/teams/get-player-stats?ID=3339&CompId=65&Stype=cm&Type=1",
+	"url": "https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer&Timezone=-7",
 	"method": "GET",
 	"headers": {
 		"X-RapidAPI-Key": "ebb7c1c15bmshbee6b284165d76ep1033adjsnbf6f2f73f55a",
 		"X-RapidAPI-Host": "livescore6.p.rapidapi.com"
-	}
+	    }
     };
 
     $.ajax(settings).done(function (response) {
+	    console.log(response);
     });
   </script>
 </head>
